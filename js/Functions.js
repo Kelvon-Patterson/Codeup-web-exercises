@@ -1,4 +1,6 @@
 "use strict";
+(function () {
+
 
  /**
 //  * TODO:
@@ -90,10 +92,10 @@ console.log(isTwo(random));
 //  * prompt the user for the bill total and a percentage they would like to tip,
 //  * then display the dollar amount they should tip
 //  */
-var bill = prompt("How much was the bill ? ")
-var tipPercent = prompt("What is the tip percentage you'd like to leave today? ")
-alert(" Your tip should be " + (bill * tipPercent).toFixed(2) + " dollars. ")
-
+var bill = parseFloat(prompt("How much was the bill ? "));
+var tipPercent = parseFloat(prompt("What is the tip percentage you'd like to leave today? "));
+var tipMessage = " Your tip should be $ " + (bill * tipPercent).toFixed(2);
+alert(tipMessage);
  //**
 //  * TODO:
 //  * Create a function named `applyDiscount`. This function should accept a price
@@ -101,12 +103,14 @@ alert(" Your tip should be " + (bill * tipPercent).toFixed(2) + " dollars. ")
 //  * and 1). It should return the result of applying the discount to the original
 //  * price.
 function applyDiscount  (price, discPercentage){
-     return price - (price * discPercentage)
+     var discountedPrice= price - (price * discPercentage)
+    return discountedPrice.toFixed(2)
 }
-console.log(applyDiscount(30,.50))
+console.log(applyDiscount(30.78,.20))
 //  * Example:
 //  * > var originalPrice = 100;
 //  * > var dicountPercent = .2; // 20%
 //  * > applyDiscount(originalPrice, dicountPercent) // 80
 //  *
 //  * > applyDiscount(45.99, 0.12) // 40.4712
+})();

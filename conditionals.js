@@ -22,12 +22,14 @@
      */
 function analyzeColor(colors) {
         if (colors === 'blue') {
-            return console.log(" Blue is the color of the sky!")
+            return console.log(" Blue is the color of the sky!");
         } else if (colors === 'red') {
             return console.log("Strawberries are red")
-        } else {
+        } else if (colors === 'cyan') {
+            return console.log("I don't know anything about cyan");
+        }else {
 
-            return console.log("I don't know anything about cyan")
+            return console.log("I don't know anything about cyan");
         }
     }
 
@@ -54,15 +56,15 @@ analyzeColor(randomColor)
      */
     switch (analyzeColor(colors)){
 
-        case colors === 'blue' :
+        case 'blue' :
             console.log(" Blue is the color of the sky!")
     break;
-        case colors === 'red' :
+        case 'red' :
              console.log("Strawberries are red")
     break;
-        case colors === "cyan":
+        case "cyan":
 
-             console.log("I don't know anything about cyan");
+             console.log("I don't know anything about that color");
         break;
 
     }
@@ -97,29 +99,41 @@ var usersPick = prompt("Chose a color !")
      * Test your function by passing it various values and checking for the expected
      * return value.
      */
-    function calculateTotal(luckyNum, totalCost){
-        return price - (luckyNum * totalCost)
-    }
-    switch (new Date().getDay()) {
-        case 0:
-            luckyNum(1) = 0;
-            break;
-        case 1:
-            luckyNum(2) = .10;
-            break;
-        case 2:
-            luckyNum(3) = .25;
-            break;
-        case 3:
-            luckyNum(4) = .35;
-            break;
-        case 4:
-            luckyNum(5) = -price;
-            break;
 
-    }
 
-}
+
+    function calculateTotal(luckyNumber, totalAmount) {
+
+        switch (luckyNumber) {
+            case 0:
+                return (totalAmount)
+                break;
+            case 1:
+                totalAmount = (totalAmount - (totalAmount * .10))
+                return (totalAmount)
+                break;
+            case 2:
+                totalAmount = (totalAmount - (totalAmount * .25))
+                return(totalAmount)
+                break;
+            case  3:
+                totalAmount = (totalAmount - (totalAmount * .35))
+                return(totalAmount)
+                break;
+            case 4:
+                totalAmount = (totalAmount - (totalAmount * .50))
+                return (totalAmount)
+                break;
+            case 5:
+                totalAmount = 0
+                return (totalAmount)
+                break;
+
+        }
+    }
+    console.log(calculateTotal(4,100))
+
+
     /**
      * TODO:
      * Uncomment the line below to generate a random number between 0 and 6.
@@ -127,8 +141,19 @@ var usersPick = prompt("Chose a color !")
      * and alerts to display to the user what their lucky number was, what their
      * price before the discount was, and what their price after the discount is.
      */
-// Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+ //Generate a random number between 0 and 6
+   var luckyNumber = Math.floor(Math.random() * 6);
+
+    var usersBill = Number(prompt("What was your total bill?"))
+
+    var userLuckyNumber =  alert("Your lucky number was " + luckyNumber)
+
+   alert(" Before discount your bill was " + usersBill)
+
+    alert(" After discount your bill total was " + calculateTotal(luckyNumber,usersBill ) + " ! ")
+
+
+    // calculateTotal(usersBill,userLuckyNum)
 
     /**
      * TODO:
@@ -146,4 +171,45 @@ var usersPick = prompt("Chose a color !")
      * Can you refactor your code to use functions?
      * HINT: The way we prompt for a value could be improved
      */
+    function isPositive(x) {
+        var isPositive= (x>0);
+        if (x>0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    function isOdd(x){
+        return x % 2 == 1 || x % 2 === -1;
+    }
+    function isEven(x){
+        var isEven = (x % 2==0)
+        if (x % 2==0){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    function isNegative(x) {
+        var isNegative = (x<0);
+        if (x<0) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+     function plusHundred(x){
+        return x + 100
+     }
+    var userNum = prompt(" Would you like to enter a number? ")
+    alert("Number is positive is " + isPositive(userNum))
+    alert("Number is negative is " + isNegative(userNum))
+    alert("Number is even is " + isEven(userNum))
+    alert("Number is odd is " + isOdd(userNum))
+    alert("This number plus 100 is " + Number(plusHundred(userNum)))
+
+
+
 
