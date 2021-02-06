@@ -33,6 +33,8 @@ function analyzeColor(colors) {
         }
     }
 
+    
+
 
 
 
@@ -171,45 +173,95 @@ var usersPick = prompt("Chose a color !")
      * Can you refactor your code to use functions?
      * HINT: The way we prompt for a value could be improved
      */
-    function isPositive(x) {
-        var isPositive= (x>0);
-        if (x>0) {
-            return true;
+    // function isPositive(x) {
+    //     var isPositive= (x>0);
+    //     if (x>0) {
+    //         return true;
+    //     } else {
+    //         return false;
+    //     }
+    // }
+    // function isOdd(x){
+    //     return x % 2 == 1 || x % 2 === -1;
+    // }
+    // function isEven(x){
+    //     var isEven = (x % 2==0)
+    //     if (x % 2==0){
+    //         return true;
+    //     }
+    //     else {
+    //         return false;
+    //     }
+    // }
+    // function isNegative(x) {
+    //     var isNegative = (x<0);
+    //     if (x<0) {
+    //         return true;
+    //     }
+    //     else {
+    //         return false;
+    //     }
+    // }
+    //  function plusHundred(x){
+    //     return x + 100
+    //  }
+    // var userNum = prompt(" Would you like to enter a number? ")
+    // alert("Number is positive is " + isPositive(userNum))
+    // alert("Number is negative is " + isNegative(userNum))
+    // alert("Number is even is " + isEven(userNum))
+    // alert("Number is odd is " + isOdd(userNum))
+    // alert("This number plus 100 is " + Number(plusHundred(userNum)))
+    //###################################################
+
+
+    var userNum = Number(prompt(" Would you like to enter a number? "))
+    function isPositive(userNum) {
+
+        var isPositive= (userNum > 0);
+        if (userNum > 0) {
+            return alert("Number is positive ");
         } else {
             return false;
         }
     }
-    function isOdd(x){
-        return x % 2 == 1 || x % 2 === -1;
+console.log
+    function isOdd(userNum){
+        var isOdd =  userNum % 2 === 1 || userNum % 2 === -1;
+        if (userNum === isOdd){
+            return alert("Number is odd  " )
+        }
+        else{
+            return false;
+        }
     }
-    function isEven(x){
-        var isEven = (x % 2==0)
-        if (x % 2==0){
-            return true;
+
+    function isEven(userNum){
+        var isEven = (userNum % 2===0)
+        if (userNum % 2===0){
+            return alert("Number is odd ");
         }
         else {
             return false;
         }
     }
-    function isNegative(x) {
-        var isNegative = (x<0);
-        if (x<0) {
-            return true;
+
+    function isNegative(userNum) {
+        var isNegative = (userNum<0);
+        if (userNum<0) {
+            return alert("Number is negative ");
         }
         else {
             return false;
         }
     }
-     function plusHundred(x){
-        return x + 100
-     }
-    var userNum = prompt(" Would you like to enter a number? ")
-    alert("Number is positive is " + isPositive(userNum))
-    alert("Number is negative is " + isNegative(userNum))
-    alert("Number is even is " + isEven(userNum))
-    alert("Number is odd is " + isOdd(userNum))
-    alert("This number plus 100 is " + Number(plusHundred(userNum)))
 
 
+    function isNAN() {
+       if (userNum === isNAN) {
+           return alert("this is not a number silly")
+       }else{
+           return false;
+       }
+   }
 
 
