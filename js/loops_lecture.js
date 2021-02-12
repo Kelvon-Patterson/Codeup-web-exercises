@@ -163,6 +163,49 @@ for (var i= 1; i < 50 ; i++) {
     console.log(i)
 
 }
+//Three loops we went over: doWhile / while / for loop
 
+//i. order some food[entrees] [do/While loop] <asking how many entrees>
+//ii. back of the house - prepare some food [while loop] <processing the entrees>
+// iii. how did we do? how many orders do we have?[for loops]<tabulate the total num of entrees>
+
+//do {
+    //execute some stuff at least once// var ordering food = true
+    //var entrees = parseInt(prompt( "How many codeup curry orders did you want?"))
+//}while(//condition//(ordering food))
+
+
+//i.
+do {
+ var orderingFood = true;
+var entrees = parseInt(prompt( "How many codeup curry orders did you want?"))
+    if (entrees <= 0 || isNaN(entrees)) {
+        alert("Hey you need to order at least one plate of food!")
+    } else{
+        orderingFood = false;
+        alert("Alright, we'll get your" + entrees + "orders of crry going in out back kitchen")
+    }
+}while((orderingFood))
+
+
+//ii.
+while(entrees > 0){
+alert("we still have some orders to get out!");
+var orderup = confirm("Is this order ready to serve?")
+    if(orderup){
+        entrees--;
+        alert("Lets see if there are anymore tickets!")
+    }else{
+        alert("Alright, we,ve got this moving, we've got to get these tickets out!")
+    }
+}
+ alert("Wow that was a lot of orders good job!!")
+
+//for loop = set up the stricture to SHOW AMOUNT of entrees
+ var entrees = 5
+for(entrees ; entrees > 0 ;entrees-- ){
+    console.log(entrees)
+     alert( "Entering ticket into Google Sheets -" + entrees + "left to enter into our spreadsheet!" )
+ }
 
 

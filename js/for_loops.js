@@ -17,11 +17,18 @@
 //     }
 // }
 
-for (var i = 1 ; i <= 9; i++){
-    var output = '';
-    for(var j = 1; j <= i ; j++ ){
-        output += i.toString()
-    }
-    console.log(output)
-}
+// for (var i = 1 ; i <= 9; i++){
+//     var output = '';
+//     for(var j = 1; j <= i ; j++ ){
+//         output += i.toString()
+//     }
+//     console.log(output)
+// }
+
+// for ( var i = 100; i >=5; i -= 5 ){
+//     console.log(i)
+// }
+
+
+
 
