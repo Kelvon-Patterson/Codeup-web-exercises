@@ -16,14 +16,17 @@ for( var i = 1 ; i <=10 ; i++){
         console.log( random  + " is odd ")
     }
 }
-
-for (var i = 1 ; i <= 9; i++){
-    var output = '';
-    for(var j = 1; j <= i ; j++ ){
-        output += i.toString()
+//Refactor into a function
+function leftPyramid(num) {
+    for (var i = 1; i <= num; i++) {
+        var output = '';
+        for (var j = 1; j <= i; j++) {
+            output += i.toString()
+        }
+        console.log(output)
     }
-    console.log(output)
 }
+leftPyramid(10)
 
 for ( var i = 100; i >=5; i -= 5 ){
     console.log(i)
