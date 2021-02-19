@@ -97,16 +97,7 @@ while(i<10){
     i++
 }
 
-var random = Math.floor((Math.random()*50)+1)
-
-var i = 0
-console.log("Random number to skip is: " + random)
-while( i < 50){
-    console.log(i % 2 !==0)
-    if(i === random){
-       console.log("Skipping this number: " + random )
 
 
-    }
-console.log(i % 2 !==0)
-}
+//Create function that take a number 'n' and returns the first 10 multiples of 'n' with 1 added to it, seperate by commmas
+
