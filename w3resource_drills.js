@@ -23,29 +23,90 @@ for (var i = 1; i <=15 ; i++ ){
         console.log(i + " is odd")
     }
 }
-
-var students = [['David', 80], ['Vinoth', 77], ['Divya', 88], ['Ishitha', 95], ['Thomas', 68]];
-
-var Avgmarks = 0;
-
-for (var i=0; i < students.length; i++) {
-    Avgmarks += students[i][1];
-    var avg = (Avgmarks/students.length);
+var membersOfMyFamily = ['Kelvon' , 'Amirah', 'Rambo', 'Loki']
+for ( var i = 0; i < membersOfMyFamily.length; i++){
+console.log("The members of my family are " + membersOfMyFamily[i])
 }
 
-console.log("Average grade: " + (Avgmarks)/students.length);
+///While loop
 
-if (avg < 60){
-    console.log("Grade : F");
+var i = 0
+
+while(i < 10){
+    console.log("while loop iteration " +i);
+    i++;
 }
-else if (avg < 70) {
-    console.log("Grade : D");
+
+var i = 10
+
+do{
+    console.log("while loop iteration" + i );
+    i++;
+} while(i<10)
+
+//Exercise
+var i = 1;
+
+while (i <65536){
+
+    console.log(i)
+i+=i
 }
-else if (avg < 80)
-{
-    console.log("Grade : C");
-} else if (avg < 90) {
-    console.log("Grade : B");
-} else if (avg < 100) {
-    console.log("Grade : A");
+
+//For loop--- Most commonly used loops
+
+//for (//initialize (var i = 1); condition(i < 10); increment(i++)){};
+
+for ( var i = 0; i < 10; i++){
+    console.log('for loop iteration' + i)
+
+}
+
+//convert to while
+var i = 0
+while(i < 10){
+    console.log('for loop iteration');
+    i++;
+}
+
+//Exercise
+
+for ( var i = 100;i >= 5 ; i-=5 ){
+
+console.log(i)
+}
+
+//Break and Continue
+     var i = 0
+while (i<10){
+    console.log(i);
+    if(i==5){
+        break;
+    }
+    i++
+}
+
+var i = 0;
+
+while(i<10){
+    if(i==5){
+        i++;
+        continue;
+    }
+    console.log(i);
+    i++
+}
+
+var random = Math.floor((Math.random()*50)+1)
+
+var i = 0
+console.log("Random number to skip is: " + random)
+while( i < 50){
+    console.log(i % 2 !==0)
+    if(i === random){
+       console.log("Skipping this number: " + random )
+
+
+    }
+console.log(i % 2 !==0)
 }
