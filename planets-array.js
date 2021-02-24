@@ -17,7 +17,7 @@
      * Read each console log below, and write some javascript code to perform
      * the step that it describes
      */
-console.log('This is the origional array ' + planets)
+console.log('This is the original array ' + planets)
 
     console.log('Adding "The Sun" to the beginning of the planets array.');
 
@@ -49,7 +49,7 @@ console.log('This is the origional array ' + planets)
 
     console.log("Reversing the order of the planets array.");
 
-    planets.reverse(planets)
+    planets.reverse()
 
     console.log(planets);
 

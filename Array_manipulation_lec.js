@@ -181,26 +181,36 @@ console.log(pies.sort());
 // TODO DEMONSTRATION: Create a function that will take in a formatted string of numbers
 //  and return an array of phone numbers without any symbols. Log the output of the returned array.
 
-/* EXAMPLE...
-    var phoneNumbers = '210-555-2020\n230-555-2020\n512-555-3030';
-    cleanPhoneNumbers(phoneNumbers);
-    the above code should output the following...
-       2105552020
-       2305552020
-       5125553030
-*/
+// */EXAMPLE...
+//     var phoneNumbers = '210-555-2020\n230-555-2020\n512-555-3030';
+//     cleanPhoneNumbers(phoneNumbers);
+//     the above code should output the following...
+//        2105552020
+//        2305552020
+//        5125553030
+// */
 
-// var phoneNumbers = '210-555-2020\n230-555-2020\n512-555-3030';
-//
-// function cleanPhoneNumbers(phoneNums) {
-//
-// }
-//
-// var cleanNumsArr = cleanPhoneNumbers(phoneNumbers);
-//
-// for (var i = 0; i < cleanNumsArr.length; i += 1) {
-//     console.log(cleanNumsArr[i]);
-// }
+var phoneNumbers = '210-555-2020\n230-555-2020\n512-555-3030';
+
+function cleanPhoneNumbers(phoneNums) {
+var output = []
+
+phoneNumbersArray = phoneNums.split('\n');
+//does not give expected result
+    //output = phoneNumbers array
+
+    phoneNumbersArray.forEach(function(phoneNum){
+        var phoneNumbersArray = phoneNum.split
+    })
+
+
+}
+
+var cleanNumsArr = cleanPhoneNumbers(phoneNumbers);
+
+for (var i = 0; i < cleanNumsArr.length; i += 1) {
+    console.log(cleanNumsArr[i]);
+}
 
 // ============================= (EXTRA INFO) Splicing Elements
 
