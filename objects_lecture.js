@@ -79,11 +79,12 @@ console.log(myCar)
 
 // TODO: Fill in your myCar object with properties of make, model, and year with the correct values. If you don't own a vehicle, fill in the details with your favorite vehicle.
 var myCar = {
-    color : "Skyblue",
+
     make: "Porche",
     model: "Taycan Turbo S",
-    fuel: "Electric",
-    year: 2019
+    year: 2019,
+    color : "Skyblue",
+    fuel: "Electric"
 
 }
 console.log(myCar)
@@ -106,7 +107,7 @@ console.log(myCar)
 //With our myCar objects set up, let's start utilizing them and diving into them!
 //We can use dot notation or array notation in similar ways to start accessing these properties
 //Let's share some information about our cars :)
-console.log("Hey, i own a " + myCar["make"] + " it's a " + myCar["model"])
+console.log("Hey, I own a " + myCar["make"] + " it's a " + myCar["model"])
 // console.log("Hey, y'all! I own a " + myCar["make"] + " " + myCar.model) //Should concat from these two properties into this structure like we've been used to doing with variables
 
 //Speaking of variables, we can tap into our prior understanding of assigning variables thus far and assign a property to a variable:
@@ -192,12 +193,18 @@ var carNumTwo = {
         firstName: "Kelvon",
         lastName: "Patterson"
     }
+};
+
+console.log(carNumTwo);
+
+carNumTwo.features = ["0-60 in 3.1", "641-hp", "Jet throttle shifter", "Self Parking assist"]
+
+for (let i = 0; i < carNumTwo.features.length; i++){
+    console.log("Here's one of my car's features: " + carNumTwo.features[i])
 }
 
-console.log(carNumTwo)
-for (let i = 0; i < myCar.features.length; i++){
-    console.log("Here's one of my car's features: " + myCar.features[i])
-}
-carNumTwo.features = ["0-60 in 3.1", "641-hp", "Jet throttle shifter"]
-theGarage.unshift(carNumTwo)
+
+
+theGarage.unshift(carNumTwo);
+
 console.log(theGarage)
