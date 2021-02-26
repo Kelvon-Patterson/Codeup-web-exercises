@@ -7,13 +7,17 @@ var circle = {
     getArea: function () {
         // TODO: complete this method
         // hint: area = pi * radius^2
+        let area;
+        area = Math.PI * Math.pow(3,2)
+        return area; // TODO: return the proper value
 
-        return; // TODO: return the proper value
     },
 
     logInfo: function (doRounding) {
         // TODO: complete this method.
-
+        if(doRounding === true){
+            return Math.round(circle)
+        }
         // If doRounding is true, round the result to the nearest integer.
         // Otherwise, output the complete value
 
