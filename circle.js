@@ -16,14 +16,20 @@ var circle = {
     logInfo: function (doRounding) {
         // TODO: complete this method.
         if(doRounding === true){
-            return Math.round(circle)
+            return Math.round(this.getArea())
+        }else {
+             return "Area of a circle with radius: " + this.radius + ", is: " +this.getArea()
         }
         // If doRounding is true, round the result to the nearest integer.
         // Otherwise, output the complete value
 
-        console.log("Area of a circle with radius: " + this.radius + ", is: ");
+
     }
 };
+
+//use this when refrencing a property within the object we're working on..
+console.log(circle.getArea().toFixed(2))
+console.log(circle.logInfo(true))
 
 // log info about the circle
 console.log("Raw circle information");
@@ -39,3 +45,11 @@ console.log("Raw circle information");
 circle.logInfo(false);
 console.log("Circle information rounded to the nearest whole number");
 circle.logInfo(true);
+
+// Define a function named convertDaystoHours that takes in one input Days. Return the conversion of the number of days into total hours. If the input is not numeric or a numeric string, convertDaystoHours, should return false.
+//
+//     Define a function named timesFour that takes in an input and multiples that input by four if it is numeric. If the input is not numeric, then return false.
+//
+//     Define a function named timesFour that takes in an input and multiples that input by four if it is numeric. If the input is not numeric, then return false.
+//
+//     Write a function named calculateTax that takes in two inputs representing the totalPaid and the taxPercent. If both inputs are numeric or numeric strings, calculateTax should return the total with tax added in a string looking like: "$XX.XX". If either or both inputs are not numeric or numeric strings, calculateTax should return false.
