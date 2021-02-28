@@ -262,3 +262,51 @@ function remainder(num1,num2){
 function sumOfSquares(num1,num2){
     return square(num1)+square(num2)
 }
+
+// Exercise 39
+// Write a function definition named timesTwoPlusThree that takes in a number, multiplies it by two, adds 3 and returns the result.
+function timesTwoPlusThree(num){
+    return (num * 2)+3
+}
+// Exercise 40
+// Write a function definition named areaOfRectangle that takes in two numbers and returns the product.
+function areaOfRectangle(num1, num2){
+    return num1 *num2
+}
+
+// Exercise 41
+// Write a function definition named areaOfCircle that takes in a number representing a circle's radius and returns the area of the circle
+function areaOfCircle(radius){
+    return Math.PI * (Math.pow(radius,2))
+
+}
+
+// Exercise 42
+// Write a function definition named circumference that takes in a number representing a circle's radius and returns the circumference.
+function circumference(radius){
+    return 2 * (Math.PI * radius)
+}
+// Exercise 43
+
+// Write a function definition named isVowel that takes in value and returns true if the value is a, e, i, o, u in upper or lower case.
+function isVowel(x){
+
+    var isVowel ;
+
+    if(x ==  "A" || x == "E" || x == "I" || x == "O" || x == "U" || x == "a" || x == "e" || x == "i" || x == "o" || x == "u" ) {
+        return true;
+    }
+    else{
+        return false;
+    }
+
+}
+
+function hasVowels(string) {
+    if (string.match(/[aeiou]/ig))
+        return true;
+
+    else{
+        return false;
+    }
+}
