@@ -26,7 +26,7 @@ var circle = {
 
     }
 };
-
+console.log(circle)
 //use this when refrencing a property within the object we're working on..
 console.log(circle.getArea().toFixed(2))
 console.log(circle.logInfo(true))
