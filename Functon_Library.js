@@ -79,3 +79,7 @@ function startsWithVowel(str){
 function endsWithVowel(str){
     return isVowel(str.charAt(str.length - 1))
 }
+
+function isANumber(num){
+    return typeof num === 'number'
+}

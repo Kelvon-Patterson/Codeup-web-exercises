@@ -8,7 +8,7 @@ var circle = {
         // TODO: complete this method
         // hint: area = pi * radius^2
         let area;
-        area = Math.PI * Math.pow(3,2)
+        area = Math.PI * Math.pow(this.radius,2)
         return area; // TODO: return the proper value
 
     },
