@@ -1,12 +1,14 @@
 h1{
     font-size: 50px;
     text-align: center;
-}
+}head>p{
+     font-size: 25px;
+ }
 body{
     background-color: azure;
     background-image: url("https://www.power3point0.org/wp-content/uploads/2019/04/shutterstock_638342005.jpg");
     text-decoration: azure;
-    background-size: cover;
+    background-size: contain;
     font-family: "Apple Chancery";
 
 }
@@ -32,13 +34,14 @@ h2,h3,h4,h5{
     font-size: 25px;
 }
 
-head>p{
-    font-size: 25px;
+
+
+a:link{
+    text-decoration: deepskyblue;
 }
 
-a{
-    text-decoration: deepskyblue;
-
+a:visited {
+    color:aqua;
 }
 
 a:hover{
