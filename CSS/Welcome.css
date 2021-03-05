@@ -12,7 +12,7 @@ body{
 }
 
 .fancy-header{
-    background-color: rebeccapurple;
+    background-color: indigo;
     color: azure;
     text-decoration: underline;
 }
@@ -34,4 +34,13 @@ h2,h3,h4,h5{
 
 head>p{
     font-size: 25px;
+}
+
+a{
+    text-decoration: deepskyblue;
+
+}
+
+a:hover{
+    color:greenyellow;
 }
