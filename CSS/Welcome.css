@@ -1,7 +1,37 @@
+h1{
+    font-size: 50px;
+    text-align: center;
+}
+body{
+    background-color: azure;
+    background-image: url("https://www.power3point0.org/wp-content/uploads/2019/04/shutterstock_638342005.jpg");
+    text-decoration: azure;
+    background-size: cover;
+    font-family: "Apple Chancery";
 
-
+}
 
 .fancy-header{
-    background-color: aquamarine;
-    color: yellow;
+    background-color: rebeccapurple;
+    color: azure;
+    text-decoration: underline;
+}
+ol{
+    list-style: armenian ;
+}
+
+ul{
+    list-style: upper-alpha ;
+}
+table, th, td {
+    border: 1px solid black;
+    padding: 3px;
+}
+
+h2,h3,h4,h5{
+    font-size: 25px;
+}
+
+head>p{
+    font-size: 25px;
 }

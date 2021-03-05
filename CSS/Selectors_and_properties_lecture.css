@@ -1,0 +1,87 @@
+body{
+    background-color: darkturquoise;
+    color: white;
+}
+
+
+/*#comic{*/
+/*    font-family: "Comic Sans MS";*/
+/*}*/
+
+/*.comic{*/
+/*    font-family: "Comic Sans MS"*/
+/*}*/
+
+/*p,h1{*/
+/*    font-family: "Apple Chancery";*/
+/*    background-color: cyan;*/
+/*}*/
+
+/*.comic{*/
+/*    background-color: gold;*/
+/*}*/
+
+/*.class1{*/
+/*    color : lightblue;*/
+/*}*/
+/*.class2{*/
+/*    background-color: pink;*/
+/*}*/
+
+/*main p {*/
+/*    background-color: aqua;*/
+/*}*/
+
+/*nav a{*/
+/*    background-color: white;*/
+/*}*/
+
+main>p {
+    font-size: 20px;
+
+}
+
+ol,ul>li{
+    font-family:"Apple Chancery" ;
+}
+h3#comic{
+    font-family: "Comic Sans MS";
+    font-size: 30px;
+}
+a:hover{
+    color:red;
+}
+/*body{*/
+/*    background-color: #F00;*/
+/*}*/
+
+/*body{*/
+/*    background-color: rgb(0, 0, 255,0.5);*/
+/*}*/
+
+/*text decoration-----------*/
+h1{
+    text-decoration: blink;
+    color: white;
+
+}
+
+h1, h2, h3{
+    text-align:center;
+    color: white;
+}
+h1{
+    font-style: oblique ;
+}
+h1{
+    font-size: 20px;
+}
+h1{
+    font-weight: 1;
+}
+
+body{
+    background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/b9e4b562-cb28-4612-87e8-26da00f5e574/ddm58vg-ab6d8dae-3665-4da9-8aa9-56f50227a5a6.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvYjllNGI1NjItY2IyOC00NjEyLTg3ZTgtMjZkYTAwZjVlNTc0XC9kZG01OHZnLWFiNmQ4ZGFlLTM2NjUtNGRhOS04YWE5LTU2ZjUwMjI3YTVhNi5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.U6eyf9r91I_F6JF9_wOVTJF4BA6sM96thH5O5GjtE7c") ;
+    /*background-repeat: repeat-y;*/
+    background-size: cover;
+}
