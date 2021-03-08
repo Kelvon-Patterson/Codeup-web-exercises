@@ -3,6 +3,7 @@ h1{
     text-align: center;
 }head>p{
      font-size: 25px;
+    text-decoration: azure;
  }
 body{
     background-color: azure;
@@ -19,7 +20,7 @@ body{
     text-decoration: underline;
 }
 ol{
-    list-style: armenian ;
+    list-style: armenian;
 }
 
 ul {
@@ -34,6 +35,7 @@ h2,h3,h4,h5{
     font-size: 25px;
     font-style: italic;
     font-kerning: normal;
+    font-weight: bold;
 }
 
 

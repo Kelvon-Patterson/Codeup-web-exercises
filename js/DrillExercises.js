@@ -35,7 +35,8 @@ function sayString(){
 console.log(sayString("codeup"))
 // Test this function with console.log(sayString('codeup'))
 
-went over function exercises again
+
+
 function showMultiplicationTable(num){
     for(var i = 1; i < 10  ; i++){
         console.log(num + " x " + i + " = "+  (num * i) )
