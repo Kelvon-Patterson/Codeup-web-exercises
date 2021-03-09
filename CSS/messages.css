@@ -10,35 +10,35 @@ font-family: Arial, Ubuntu, sans-serif;
     background-color: #bed0f4;
     color: #4e4b9c;
     padding: 10px;
-    margin: 10px;
+    margin: 0.5em 1.5em;
     border-radius: 5px;
-    border:solid lightgray thin;
+    border: 1px solid lightgray ;
 }
 
 .message-success{
 background-color: #c1e7cd;
     color: #3f865b;
     padding: 10px;
-    margin: 10px;
+    margin: 0.5em 1.5em;
     border-radius: 5px;
-    border:solid lightgray thin;
+    border: 1px solid lightgray ;
 }
 
 .message-warning{
 background-color: #f1efba;
     color: #735f03;
     padding: 10px;
-    margin: 10px;
+    margin: 0.5em 1.5em;
     border-radius: 5px;
-    border:solid lightgray thin;
+    border: 1px solid lightgray ;
 }
 
 .message-error{
 background-color: #eec5c9;
     color: #75192e;
     padding: 10px;
-    margin: 10px;
+    margin: 0.5em 1.5em;
     border-radius: 5px;
-    border:solid lightgray thin;
+    border: 1px solid lightgray ;
 }
 
