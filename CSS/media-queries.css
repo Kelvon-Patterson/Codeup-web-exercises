@@ -1,1 +1,55 @@
-body{}
+* {
+    box-sizing: border-box;
+}
+
+
+body{
+
+
+}
+h1{text-align: center
+}
+
+.alert-info{
+    background-color: #7eb3ba;
+    text-align: center;
+    padding:3em 8em;
+    margin: 2em;
+
+
+
+
+}
+li{
+    padding: 3em 6em;
+    margin-top: 2em ;
+    margin-left:auto;
+    margin-right: auto;
+    /*width: 100%;*/
+    background-color: lightgray;
+    text-align: center;
+
+}
+body>.alert-info>a:hover{
+
+}
+.nav-links{
+    text-align: center;
+    list-style: none;
+
+
+}
+.header-img{
+    text-align: center;
+    margin-right:auto;
+    margin-left: auto;
+}
+.main{
+    margin: 1em 1em;
+}
+.sub-section{
+    margin: 1em 1em;
+}
+footer>p{
+    margin:2em;
+}
