@@ -11,14 +11,14 @@
 </head>
 <body>
 <h3 class="text-center mt-3">Setting up our first container w/ empty rows</h3>
-<div class="container-fluid">
+<div class="container">
     <div class="row">
     </div>
     <div class="row">
     </div>
 </div>
 <h3 class="text-center mt-3">Let's set up our first few interior columns(auto)</h3>
-<div class="container-fluid">
+<div class="container">
     <div class="row">
         <div class="col">One of three</div>
         <div class="col">Two of three</div>
@@ -39,14 +39,37 @@
         <div class="col-9">Two of two</div>
     </div>
         <div class="row">
-            <div class="col">One of four</div>
-            <div class="col">Two of four</div>
-            <div class="col">Three of four</div>
-            <div class="col">Four of four</div>
+            <div class="col-3">One of four</div>
+            <div class="col-3">Two of four</div>
+            <div class="col-3">Three of four</div>
+            <div class="col-3">Four of four</div>
         </div>
     </div>
+<!-- let's take a look at responsiveness-->
 
+<h3 class="text-center mt-3">Specific columns - AND specific screen siz settings!</h3>
 
+    <div class="container">
+
+        <div class="row">
+            <div class="col-sm-4 col-md-6 col-lg-8">One of two</div>
+
+            <div class="col-sm-8 col-md-6 col-lg-4>">Two of two</div>
+        </div>
+
+        <div class="row">
+            <div class="col">One automatic col</div>
+        </div>
+
+    </div>
+
+<h3 class="text-center">Columns with some white space</h3>
+<div class="container">
+    <div class="row">
+        <div class="col-4">one of two</div>
+        <div class="col-4">two of two</div>
+    </div>
+</div>
 <!--Bootstrap JS-->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
