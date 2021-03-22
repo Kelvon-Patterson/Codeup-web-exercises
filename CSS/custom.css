@@ -1,12 +1,17 @@
+*{
+    box-sizing: border-box;
+}
 .img-pizza{
-    height:10em;
+    height:11em;
     width:100%;
     margin:0;
     padding: 0;
+
 }
 .img-container{
     margin:0;
     padding: 0;
+    height: 4em;
 }
 .jumbotron-fluid{
     margin:0;
@@ -19,4 +24,7 @@
     padding: 0;
     margin:0;
     text-align: center;
+    position:absolute;
+    top:1.75em;
+    color:rgba(0, 0, 0, 0.5);
 }
