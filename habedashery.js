@@ -53,13 +53,19 @@ console.log(getNavBrand)
 console.log(getNavBrand.innerText = "Kellz");
 
 // TODO: There's only one ordered list on the page - can you get into that ordered list and use innerHTML to change the list items within that ordered list to what you think the top sellers were?
-var ordredList = document.getElementsByTagName("li")
+var ordredList = document.getElementsByClassName("hat-sold")
 console.log(ordredList)
 
-ordredList[0].innerHTML = ""
+ordredList[0].innerHTML = "Fiesta Hat"
+ordredList[1].innerHTML = "Spinning Hat"
+ordredList[2].innerHTML = "Kelvon Hat"
 
 // TODO (BONUS): I have two "special-offer" classes used in my table - grab those classes by name, store them into a variable, and then use a loop to replace the innerHTML. The new table data should have strings that let our customers know that "New discounts are coming soon!"
+ var specialOffer = document.getElementsByClassName("special-offer")
 
+for(var i =0 ; i < specialOffer.length; i++){
+
+}
 // attributes
 
 // TODO: Bringing in Bootstrap components, sometimes we can forget to change example or demo related text - one of my ids in the HTML is set to "navbarTogglerDemo02". I don't think we need that ID at all, can you remove that attribute for me? Start by storing it in a variable!
