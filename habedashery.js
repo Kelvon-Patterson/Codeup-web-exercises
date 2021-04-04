@@ -1,7 +1,7 @@
 //i. locating in the DOM
 
 // TODO: Find an element by the id of "hat-search". Store the result into a variable. Use a console log to check what is in your variable.
-var hatSearch = document.getElementById("hat-search");
+var hatSearch = document.getElementById("hat-search")[0];
 
 console.log(hatSearch)
 
@@ -63,12 +63,16 @@ ordredList[2].innerHTML = "Kelvon Hat"
 // TODO (BONUS): I have two "special-offer" classes used in my table - grab those classes by name, store them into a variable, and then use a loop to replace the innerHTML. The new table data should have strings that let our customers know that "New discounts are coming soon!"
  var specialOffer = document.getElementsByClassName("special-offer")
 
-for(var i =0 ; i < specialOffer.length; i++){
-
+for(var i = 0 ; i < specialOffer.length; i++){
+ specialOffer[i].innerHTML="New discounts are coming soon!"
 }
 // attributes
 
 // TODO: Bringing in Bootstrap components, sometimes we can forget to change example or demo related text - one of my ids in the HTML is set to "navbarTogglerDemo02". I don't think we need that ID at all, can you remove that attribute for me? Start by storing it in a variable!
+var nodeNavTogglerDemo02= document.getElementById("navbarTogglerDemo02")
+if(nodeNavTogglerDemo02.parentNode){
+    nodeNavTogglerDemo02.parentNode.removeChild(nodeNavTogglerDemo02)
+}
 
 // TODO: Uh oh - actually there was a BUTTON that referred to 'navbarTogglerDemo02' that is right above it in our HTML structure! Let's add an ID back to the variable you used above that makes more sense (perhaps "navbar-collapser"?)
 

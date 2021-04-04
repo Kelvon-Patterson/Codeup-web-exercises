@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+    <title>DOM Event Lecture</title>
 </head>
 <body>
-<button id="btn1">Click Me!</button>
+<button id="button1">Let's see an Event!</button>
 <script>
     'use strict';
 
-    // create a handler function
-    var listener = function (event) {
-        alert('You clicked the button!');
-    }
 
-    // register the listener to handle clicks on btn1
-    document.getElementById('btn1').addEventListener('click', listener);
+    // create a handler function
+    var buttonOne = document.getElementById("button1");
+
+    buttonOne.addEventListener("click", function(){
+        //What would you like me to do when i detect this incoming click??
+        alert("This button- it has been clicked! AHA")
+    });
+
+
 
 </script>
 </body>
