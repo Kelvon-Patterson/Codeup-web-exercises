@@ -61,16 +61,20 @@ console.log(countPosi([3, 6, 9, -1]))
 
 // Write a function named printRecipe that accepts a recipe object. A recipe object will have properties of title (a string), servings (a number), and ingredients (an array of strings). printRecipe will console.log each property in this format:
 
-function printRecipe(recipeObject){
+var caldoRecipe = {
+	name: "Caldo con Pollo",
+	servings: 4,
+	ingredients: ["whole chicken", "carrots", "cabbage", "potatoes", "jalapeno", "cilantro", "salt", "pepper", "cumin", "onion powder", "garlic powder"]}
+function printRecipe(recipe){
+
+
 // Example object:
-var caldoRecipe = [{
-		name: "Caldo con Pollo",
-		servings: 4,
-		ingredients: ["whole chicken", "carrots", "cabbage", "potatoes", "jalapeno", "cilantro", "salt", "pepper", "cumin", "onion powder", "garlic powder"]}]
-	return caldoRecipe
+console.log(recipe.name)
+	console.log("Service: " + recipe.servings)
+	console.log("Required ingredients: " + recipe.ingredients)
 }
 
-console.log(printRecipe(caldoRecipe[0].name));
+printRecipe(caldoRecipe)
 // Expected look in console from running printRecipe(caldoRecipe):
 // Caldo con Pollo
 // Serves: 4
@@ -79,6 +83,21 @@ console.log(printRecipe(caldoRecipe[0].name));
 
 // Write a function named convertAddressToObject that accepts a string that contains a street number (as a string) and street name separated by a space characters, and returns an object with properties streetNumber and streetName.
 
-// convertAddressToObject('8626 Sunny Oaks') // {streetNumber: '8646', streetName: 'Sunny Oaks'}
+
+
+function convertAddressToObject(string){
+
+	var obj = {};
+	var streetNumber = string.split(' ').slice(0,1).join('')
+	var streetName= string.split(' ').slice(1).join('')
+	obj.streerNumber= {};
+	obj.streerName={};
+
+	return obj
+}
+
+
+
+convertAddressToObject('8626 Sunny Oaks') // {streetNumber: '8646', streetName: 'Sunny Oaks'}
 // convertAddressToObject('5408 Villa Nueva') // {streetNumber: '5408', streetName: 'Villa Nueva'}
 
