@@ -90,9 +90,8 @@ var darkbtn= $('nav').toggleClass("btn btn-dark navbar-dark")
 // var lightbtn= $('#colorschemeBtn').toggleClass("btn btn-light bg-info")
 
 $('#colorschemeBtn').click(function(e){
-    e.preventDefault()
-    $(e.target(darkbtn))
-
+  $('nav').toggleClass('bg-dark', 'navbar-dark')
+    $('nav').toggleClass('bg-light', 'navbar-light')
 })
 
 
