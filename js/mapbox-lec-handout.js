@@ -59,9 +59,9 @@ var map = new mapboxgl.Map(mapOptions)
 
 // TODO: Make a new marker! Let's experiment with the color and setting the LngLat [how about a marker for Codeup San Antone? -98.4895, 29.4267 Codeup Dallas? -96.8056, 32.7786]
 
-var codeupMarker= new mapboxgl.Marker({color: "#78a34a"})
-    .setLngLat([-98.4895, 29.4267])
-    .addTo(map)
+// var codeupMarker= new mapboxgl.Marker({color: "#78a34a"})
+//     .setLngLat([-98.4895, 29.4267])
+//     .addTo(map)
 
 // TODO: Update the marker object to make the marker draggable. *Hint: reference the docs!
 var marker = new mapboxgl.Marker({color:"yellow", draggable: true })
@@ -75,26 +75,26 @@ var marker = new mapboxgl.Marker({color:"yellow", draggable: true })
 
 
 // TODO TOGETHER: Add a popup to the map over San Antonio's Codeup. Set the html as a paragraph that says "Codeup Rocks!"
-var marcoPopup= new mapboxgl.Popup()
-    .setLngLat([-98.4861, 29.4260])
-    .setHTML("<h6><em>Codeup Rocks!<em></em></h6>")
-    .addTo(map)
+// var marcoPopup= new mapboxgl.Popup()
+//     .setLngLat([-98.4861, 29.4260])
+//     .setHTML("<h6><em>Codeup Rocks!<em></em></h6>")
+//     .addTo(map)
 
-codeupMarker.setPopup(marcoPopup)
+// codeupMarker.setPopup(marcoPopup)
 
 //There are also other popup to pay attention to if we wanted
-marcoPopup.on('close', function (){
-    console.log("this popup was closed")
-})
-marcoPopup.on('open', function (){
-    console.log("this popup was opened")
-})
+// marcoPopup.on('close', function (){
+//     console.log("this popup was closed")
+// })
+// marcoPopup.on('open', function (){
+//     console.log("this popup was opened")
+// })
 
 
 // TODO TOGETHER: We'll comment out the popup we just added. Next, let's add a popup to the Alamo marker!
 
 var alamoPopup = new mapboxgl.Popup()
-    .setHTML("<p>REMEMBER THE ALAMO")
+    .setHTML("<p>REMEMBER THE ALAMO!!!!!</p>")
     .addTo(marker)
 
 marker.setPopup(alamoPopup)
@@ -111,20 +111,62 @@ marker.setPopup(alamoPopup)
  *********************************************/
 // Geocoding Docs --> https://docs.mapbox.com/api/search/#geocoding
 // TODO TOGETHER: Let's set up our mapbox-geocoder-utils.js!
-
+//we set up: a mapbox-geocoder-utils.js, hooked it up and console.log() to confirm connection to mapbox-lec.html
 
 // TODO TOGETHER: Using the Geocoder helper function, log the coordinates of Codeup and recenter the map to focus on Codeup.
 //https://docs.mapbox.com/mapbox-gl-js/api/map/#map#setcenter
+// geocode("San Antonio", API_TOKEN_HERE).then(function(results) {
+// *      // do something with results
+// *  })
+
+geocode("600 Navarro St #600, San Antonio, TX 78205", mapBoxToken).then(function (results){
+    console.log(results);
+    map.setCenter(results)
+})
+
 
 //TODO: Using the geocode method above, add a marker at Codeup to the map
 
+geocode("600 Navarro St #600, San Antonio, TX 78205", mapBoxToken).then(function (results) {
+
+        var popup= new mapboxgl.Popup()
+            .setHTML('<h6>Thanks Geocode</h6>')
+    new mapboxgl.Marker()
+        .setLngLat(results)
+        .setPopup(popup)
+        .addTo(map)
+
+    })
 
 //TODO: Instead of setCenter try using map.jumpTo()
+geocode("600 Navarro St #600, San Antonio, TX 78205", mapBoxToken).then(function (results) {
+
+    var popup= new mapboxgl.Popup()
+        .setHTML('<h6>Thanks Geocode</h6>')
+    new mapboxgl.Marker()
+        .setLngLat(results)
+        .setPopup(popup)
+        .addTo(map)
+
+    map.flyTo({center:results})
+})
+
+
 //TODO: Instead of setCenter try using map.flyTo()
 
 
 
 // TODO TOGETHER: Reverse Geocoding: Using the reverse geocoding method, enter the coordinates {lng: -98.4861, lat: 29.4260} to get a physical address for the Alamo
+
+// EXAMPLE:
+//     *
+// *  reverseGeocode({lat: 32.77, lng: -96.79}, API_TOKEN_HERE).then(function(results) {
+// *      // do something with results
+// *  })
+
+reverseGeocode({lat: 29.4260, lng: -98.4861}, mapBoxToken).then(function (results){
+    console.log(results)
+})
 
 // TODO: Reverse geocode coordinates of your choice using the reverse geocode method
 
