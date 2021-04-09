@@ -48,13 +48,13 @@
                      $('#insertProducts').append(content)
                  });
               })
-                    inventoryRequest.fail(function(){
-                        $('#insertProducts').append("<tbody> Error getting inventory! :( </tbody>")
-                    })
+
           }
+
           generateInventory();
         $('#refresh').click(function (e){
-            console.log('the refresh button was clicked')
+
+
             $('#insertProducts').html('')
                 generateInventory()
         })
