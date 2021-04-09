@@ -6,9 +6,9 @@
 </head>
 <body>
 
-<h1>My Tool Store</h1>
+<h1 class=" bg-primary">My Tool Store</h1>
 
-<table id="products">
+<table class="table-success" id="products">
     <thead>
     <tr>
         <th>Title</th>
@@ -17,9 +17,9 @@
         <th>Categories</th>
     </tr>
     </thead>
-    <tbody id="insertProducts"></tbody>
+    <tbody class= 'table-info' id="insertProducts"></tbody>
 </table>
-
+<button id="refresh" >Refresh</button>
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
 <script>
@@ -53,9 +53,19 @@
                     })
           }
           generateInventory();
-
+        $('#refresh').click(function (e){
+            console.log('the refresh button was clicked')
+            $('#insertProducts').html('')
+                generateInventory()
+        })
     })();
+
+
+
 </script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
 
 </body>
 </html>
