@@ -26,25 +26,34 @@
     (function() {
         "use strict";
         // TODO: Create an AJAX GET request for the file under data/inventory.json
-          var inventoryRequest=  $.ajax('data/inventory.json', {
-              method: "GET",
-              data: {
-
-              }
-          })
+          var inventoryRequest=  $.ajax('data/inventory.json')
         console.log(inventoryRequest)
         // TODO: Take the data from inventory.json and append it to the products table
         //       HINT: Your data should come back as a JSON object; use console.log() to inspect
         //             its contents and fields
+        //       HINT: You will want to target #insertProducts for your new HTML elements
                 function generateInventory(){
 
-              inventoryRequest.data(function (data){
-                  var content= "";
-                  content+= "<th>" + responseJSON.title + "</th>"
-              })
+              inventoryRequest.done(function (data){
 
-                }
-        //       HINT: You will want to target #insertProducts for your new HTML elements
+                 $.each(data, function(index,inventory){
+                     var content = "";
+
+                    content+= "<tr>"
+                     content+= "<th>" + inventory.title + "</th>"
+                     content+= "<th>" + inventory.quantity + "</th>"
+                     content+= "<th>" + inventory.price + "</th>"
+                     content+= "<th>" + inventory.categories + "</th>"
+                     console.log(content)
+                     $('#insertProducts').append(content)
+                 });
+              })
+                    inventoryRequest.fail(function(){
+                        $('#insertProducts').append("<tbody> Error getting inventory! :( </tbody>")
+                    })
+          }
+          generateInventory();
+
     })();
 </script>
 
