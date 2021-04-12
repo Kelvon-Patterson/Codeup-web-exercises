@@ -5,6 +5,49 @@
     <title>Traversing</title>
 </head>
 <body>
+<h3>YellowStone</h3>
+<ul class="park-facts">
+    <li>Located in the States Idaho, Montana, and wyoming</li>
+    <li>The park contains a natural hotsprings</li>
+    <li>First established National Park in the world</li>
+    <li>There are over 67 species of mammal and 330 birds</li>
+</ul>
+
+<h3>Bryce Canyon</h3>
+<ul class="park-facts">
+    <li>Bryce Canyon National Park covers a total area of 35,835 acres</li>
+    <li>The lowest elevation found in Bryce Canyon is 6,620 feet at Yellow Creek</li>
+
+    <li>Bryce Canyon is not technically a canyon. It is a series of about a dozen natural amphitheaters, eroded into an escarpment of the Paunsaugunt Plateau.</li>
+
+    <li>Bryce Canyon has some of the darkest night skies in the United States, and the stargazing is extraordinary on a clear night. Astronomy programs are sometimes offered.</li>
+</ul>
+
+<h3>Yoho</h3>
+<ul class="park-facts">
+    <li>Yoho National Park is a 507 square mile park located in British Columbia's southeast region, on the western side of the Rocky Mountains. </li>
+    <li>There are two icefields in Yoho National Park called Waputik and Wapta.</li>
+    <li>There are more than 400 kilometers of trails to hike within Yoho National Park.</li>
+    <li>Yoho National Park has 61 lakes and ponds within its boundaries. The largest lake in the park is Emerald Lake.</li>
+</ul>
+
+<button id="last-btn">li diff bg</button>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script>
+
+    $('#last-btn').click( function(){
+        $('li').last().css('background-color', 'yellow')
+        console.log('clicked')
+    })
+$('h3').click(function(){
+    $('li').first().css('font-weight', 'bold')
+})
+
+// $('.park-facts').each(function(){
+//
+// })
+</script>
+
 
 </body>
 </html>

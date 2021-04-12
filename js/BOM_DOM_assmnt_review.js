@@ -19,3 +19,4 @@ var instructions = function (e){
 
 $("#toggleClass").click(instructions)
 //TODO: can we set up an area of HTML - in that area of HTML, when the BOX is hovered over you would see the height and width of the BOX
+

@@ -120,37 +120,37 @@ var map = new mapboxgl.Map(mapOptions)
 // *      // do something with results
 // *  })
 
-geocode("600 Navarro St #600, San Antonio, TX 78205", mapBoxToken).then(function (results){
-    console.log(results);
-    map.setCenter(results)
-})
+// geocode("600 Navarro St #600, San Antonio, TX 78205", mapBoxToken).then(function (results){
+//     console.log(results);
+//     map.setCenter(results)
+// })
 
 
 //TODO: Using the geocode method above, add a marker at Codeup to the map
 
-geocode("600 Navarro St #600, San Antonio, TX 78205", mapBoxToken).then(function (results) {
-
-        // var popup= new mapboxgl.Popup()
-        //     .setHTML('<h6>Thanks Geocode</h6>')
-    new mapboxgl.Marker()
-        .setLngLat(results)
-        .setPopup(popup)
-        .addTo(map)
-
-    })
-
-//TODO: Instead of setCenter try using map.jumpTo()
 // geocode("600 Navarro St #600, San Antonio, TX 78205", mapBoxToken).then(function (results) {
 //
-//     var popup= new mapboxgl.Popup()
-//         .setHTML('<h6>Thanks Geocode</h6>')
+//         // var popup= new mapboxgl.Popup()
+//         //     .setHTML('<h6>Thanks Geocode</h6>')
 //     new mapboxgl.Marker()
 //         .setLngLat(results)
 //         .setPopup(popup)
 //         .addTo(map)
 //
-//     map.flyTo({center:results})
-// })
+//     })
+
+//TODO: Instead of setCenter try using map.jumpTo()
+// geocode("600 Navarro St #600, San Antonio, TX 78205", mapBoxToken).then(function (results) {
+geocode("600 Navarro St #600, San Antonio, TX 78205", mapBoxToken).then(function (results) {
+    var popup = new mapboxgl.Popup()
+        .setHTML('<h6>Thanks Geocode</h6>')
+    new mapboxgl.Marker()
+        .setLngLat(results)
+        .setPopup(popup)
+        .addTo(map)
+
+    map.flyTo({center: results})
+})
 
 
 //TODO: Instead of setCenter try using map.flyTo()
