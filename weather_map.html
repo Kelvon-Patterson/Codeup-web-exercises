@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en" >
 <head>
     <meta charset="UTF-8">
     <title>Mapbox-maps-api</title>
@@ -9,8 +9,40 @@
 
 </head>
 <body>
+<table id="weather-table">
+    <thead>
+    <tr>
+        <th>Col1</th>
+        <th>Col2</th>
+        <th>Col3</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>data-1a</td>
+        <td>data-1b</td>
+        <td>data-1c</td>
+    </tr>
+    <tr>
+        <td>data-2a</td>
+        <td>data-2b</td>
+        <td>data-2c</td>
+    </tr>
+    <tr>
+        <td>data-3a</td>
+        <td>data-3b</td>
+        <td>data-3c</td>
+    </tr>
+    <tr>
+        <td>data-4a</td>
+        <td>data-4b</td>
+        <td>data-4c</td>
+    </tr>
 
+    </tbody>
+</table>
 
+<button id="submitButton">Get Weather</button>
 <div id='map' style='width: 500px; height: 500px;'></div>
 
 
@@ -21,7 +53,8 @@
 
 
 
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 
 <script src = js/keys.js></script>
 <script src="js/mapbox-geocoder-utils.js"></script>

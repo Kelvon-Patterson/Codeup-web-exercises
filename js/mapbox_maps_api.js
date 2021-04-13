@@ -10,9 +10,7 @@ var mapOptions = {
 }
 var map = new mapboxgl.Map(mapOptions)
 map.on('click', function(){
-    $('#zoom-selector').change(function(e){
-
-    })
+    $('#zoom-selector').change(function(e){})
 })
 
 
@@ -43,21 +41,28 @@ var restaurants= [{
 
 restaurants.forEach(function(restaurant){
     geocode(restaurant.location, mapBoxToken).then(function (results) {
-
-        var popup= new mapboxgl.Popup()
-            .setHTML('<h6>'
-                + restaurant.name
-                + "<br>"
-                + restaurant.info
-                + '</h6>')
         new mapboxgl.Marker()
             .setLngLat(results)
             .setPopup(popup)
             .addTo(map)
+
+        var popup= new mapboxgl.Popup()
+            .setHTML( '<p>'
+                +restaurant.info
+                +'</p>')
+
+
+
+        });
     })
+
+var zoomSelect = document.getElementById('zoom-selector');
+
+zoomSelect.addEventListener('change',function(){
+    var zoomValue = zoomSelect.options[zoomSelect.selectedIndex].value;
 })
-
-
+console.log(zoomValue)
+map.setZoom(zoomValue)
 
 
 
