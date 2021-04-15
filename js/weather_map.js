@@ -1,12 +1,4 @@
-mapboxgl.accessToken = mapBoxToken;
-// $(document).ready(function(){
-
-
-
-
-
-
-        function renderWeather(weatherRequest){
+function renderWeather(weatherRequest){
 
             $.get('https://api.openweathermap.org/data/2.5/onecall', {
                 lat:29.423017 ,
@@ -15,7 +7,7 @@ mapboxgl.accessToken = mapBoxToken;
                 units: 'imperial',
                 exclude: ' current,hourly, minutely, alerts'
             }).done(function (results){
-                // console.log(results.daily[0].temp.day)
+                console.log(results)
                 var html = '';
                 for (var i= 0; i < 5; i++){
                     // html +=  renderWeather(results.daily[i])
@@ -33,5 +25,16 @@ mapboxgl.accessToken = mapBoxToken;
         }
 
             renderWeather()
+
+mapboxgl.accessToken = mapBoxToken;
+
+var mapOptions = {
+
+    container: "map",
+    style: "mapbox://styles/mapbox/streets-v11",
+    center: [-98.4861, 29.4252],
+    zoom: 9
+}
+var map = new mapboxgl.Map(mapOptions)
 
 
