@@ -117,7 +117,7 @@ console.log(strLengthObj)
 
 //TODO Together: Pretty good, but do we want to count the number of times the comma is involved? If only we had a method that would .filter() - wait! Let's refactor the above function to do just that!
 function countWords(sentence) {
-    const words = sentence.split(' '); // transform a sentence into an array of words
+    let words = sentence.split(' '); // transform a sentence into an array of words
 
     words = words.filter((word) => (word !== ","));
 
