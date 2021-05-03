@@ -6,8 +6,12 @@
   Highlight all of the words over 8 characters long in the paragraph text (with a yellow background for example)
 */
 
-console.log($('p').text());
+let paragraph = $('p').html(function (){
+    paragraph.innerHTML = paragraph.innerHTML.split(' ')
+     .map(words=> words.length > 8? `<span style= "background-color: yellow>" ${words} </span>`:words)
+     .join(' ')
 
+})
 /*
   Exercise 02
   -----------

@@ -63,9 +63,65 @@ for (var i = 1; i <= 9; i++){
 }
 
 function notANumeber(num){
-    typeof num !== 'number'
+   return typeof num !== 'number'
 }
 
+function recurse(){
+    // function code
+    recurse();
+    //function code
+}
+recurse();//resurses infinitely because no condition is met to stop the recursion
+
+//here we have the syntax for a recursion function that has a condition to be met to stop calling the function
+
+// function recurse1(){
+//     if(condition ){
+//         recurse1();// }
+//     else{
+//         //stop calling recurse1
+//     }
+// }
+
+//working recursion function
+
+function countDown(number){
+    //display number
+    console.log(number);
+    //decrease the number value
+    const newNumber = number -1;
+
+    //base case
+    if(newNumber > 0){
+        countDown(newNumber);
+    }
+
+}
+countDown(10)
+
+//using recursion to get a factorial
+
+// program to find the factorial of a number
+function factorial(x) {
+
+    // if number is 0
+    if (x === 0) {
+        return 1;
+    }
+
+    // if number is positive
+    else {
+        return x * factorial(x - 1);
+    }
+}
+
+const num = 3;
+
+// calling factorial() if num is non-negative
+if (num > 0) {
+    let result = factorial(num);
+    console.log(`The factorial of ${num} is ${result}`);
+}
 
 
 
