@@ -1,4 +1,4 @@
-
+let coordinates = [29.423017, -98.48527]
 function renderWeather(weatherRequest){
 
             $.get('https://api.openweathermap.org/data/2.5/onecall', {
@@ -8,7 +8,7 @@ function renderWeather(weatherRequest){
                 units: 'imperial',
                 exclude: ' current,hourly, minutely, alerts'
             }).done(function (results){
-                console.log(results)
+                console.log(results);
                 var html = '';
                 for (var i= 0; i < 5; i++){
                     // html +=  renderWeather(results.daily[i])
@@ -19,14 +19,14 @@ function renderWeather(weatherRequest){
                     html += '<p>' +'Pressure: ' +results.daily[i].pressure + '</p>';
                     html += '<p>' + 'Wind Speed: ' +results.daily[i].wind_speed + '</p>';
                     html+= '</div>'
-                    $('#forecast').append(html)
+                    $('#forecast').append(html);
                 }
 
             })
         }
 
 
-renderWeather()
+renderWeather();
 
 mapboxgl.accessToken = mapBoxToken;
 
@@ -38,7 +38,7 @@ var mapOptions = {
     zoom: 9
 }
 var map = new mapboxgl.Map(mapOptions)
-let coordinates = [29.423017, -98.48527]
+
 
 geocode(restaurant.location, mapBoxToken).then(function (results) {
     new mapboxgl.Marker()
